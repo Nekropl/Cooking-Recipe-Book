@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="19dp">
+
+    <!-- Номер шага -->
+    <TextView
+        android:id="@+id/step_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/step"
+        android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+    <!-- Описание шага -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/step_description_hint"
+        app:hintTextColor="@color/Grey_400"
+        app:boxBackgroundMode="none">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/step_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:background="@drawable/rounded_corners"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Ингредиенты и оборудование можно добавить по аналогии с описанием шага -->
+    <!-- Пример для ингредиентов -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/step_ingredients_hint"
+        app:hintTextColor="@color/Grey_400"
+        app:boxBackgroundMode="none">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/step_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:background="@drawable/rounded_corners"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Пример для оборудования -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/step_equipment_hint"
+        app:hintTextColor="@color/Grey_400"
+        app:boxBackgroundMode="none">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/step_equipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:background="@drawable/rounded_corners"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

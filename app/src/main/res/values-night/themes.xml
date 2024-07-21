@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RecipeApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomNavigationStyle" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/bottom_nav_color</item>
+    </style>
+
+    <style name="CardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="android:backgroundTint">@color/bottom_nav_color</item>
+    </style>
+
+    <style name="Theme.RecipeApp" parent="Base.Theme.RecipeApp" />
+</resources>

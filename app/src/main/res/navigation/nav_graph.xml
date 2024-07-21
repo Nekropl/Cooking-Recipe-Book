@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ru.mtusi_skf.recipeapplication.screens.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_savedFragment"
+            app:destination="@id/savedFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="ru.mtusi_skf.recipeapplication.screens.recipe.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe">
+        <argument
+            android:name="recipe"
+            app:argType="ru.mtusi_skf.recipeapplication.model.Recipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="ru.mtusi_skf.recipeapplication.screens.post.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post" />
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="ru.mtusi_skf.recipeapplication.screens.saved.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_savedFragment_to_DBRecipeFragment"
+            app:destination="@id/DBRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="ru.mtusi_skf.recipeapplication.screens.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DBRecipeFragment"
+        android:name="ru.mtusi_skf.recipeapplication.screens.dbrecipe.DBRecipeFragment"
+        android:label="fragment_dbrecipe"
+        tools:layout="@layout/fragment_dbrecipe">
+        <argument
+            android:name="dbrecipe"
+            app:argType="ru.mtusi_skf.recipeapplication.data.local.entity.RecipeEntity" />
+    </fragment>
+</navigation>
